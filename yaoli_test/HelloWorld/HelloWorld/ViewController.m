@@ -13,6 +13,8 @@
 @end
 
 @implementation ViewController
+@synthesize Label;
+@synthesize Text;
 
 - (void)viewDidLoad
 {
@@ -22,6 +24,8 @@
 
 - (void)viewDidUnload
 {
+    [self setLabel:nil];
+    [self setText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -35,4 +39,19 @@
     }
 }
 
+- (BOOL) textFieldShouldReturn: (UITextField *) theTextField {
+    if(theTextField == Text) {
+        [theTextField resignFirstResponder];
+    }
+    return YES;
+}
+
+- (IBAction)Greeting:(id)sender {
+    NSString *name = Text.text;
+    if([name length] == 0) {
+        name = @"world";
+    }
+    NSString *string = [[NSString alloc] initWithFormat:@"hello %@", name];
+    Label.text = string;
+}
 @end
