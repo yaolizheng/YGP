@@ -27,6 +27,8 @@
     locManager.desiredAccuracy = kCLLocationAccuracyBest;
     locManager.distanceFilter = 100;
     [locManager startUpdatingLocation];
+    
+    
 }
 
 - (void)viewDidUnload
@@ -52,9 +54,23 @@
     CLLocationCoordinate2D loc = [newLocation coordinate];
     float longitude = loc.longitude;
     float latitude = loc.latitude;
-    self.lonLabel.text = [NSString stringWithFormat:@"%f",longitude];
-    self.latLabel.text = [NSString stringWithFormat:@"%f",latitude];
+    self.lonLabel.text = [NSString stringWithFormat:@"longtitude:  %f",longitude];
+    self.latLabel.text = [NSString stringWithFormat:@"latitude:  %f",latitude];
+    self.mapView.mapType = MKMapTypeStandard;
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = latitude;
+    newRegion.center.longitude = longitude;
+    newRegion.span.latitudeDelta = 0.004;
+    newRegion.span.longitudeDelta = 0.004;
     
-}
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = latitude;
+    coordinate.longitude = longitude;
+    MKPointAnnotation *annotation = [[MKPointAnnotation new] init];
+    [annotation setCoordinate:coordinate];
+    [annotation setTitle:@"I am here"];
+    //[self.mapView removeAnnotation:self.mapView.annotations];
+    [self.mapView addAnnotation:annotation];
+    [self.mapView setRegion:newRegion animated:YES];}
 
 @end
