@@ -26,6 +26,8 @@
 		3BD0EF3B1613FE9300252D97 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0EF3A1613FE9300252D97 /* AVFoundation.framework */; };
 		3BD0EF3D1613FE9A00252D97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0EF3C1613FE9A00252D97 /* CoreLocation.framework */; };
 		3BD0EF401613FFD900252D97 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0EF3F1613FFD900252D97 /* CaptureSessionManager.m */; };
+		3BD3231E161559ED00FB8DAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD3231D161559ED00FB8DAE /* CoreMotion.framework */; };
+		3BD3232116155A0100FB8DAE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD3232016155A0100FB8DAE /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		3BD0EF3C1613FE9A00252D97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BD0EF3E1613FFD900252D97 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
 		3BD0EF3F1613FFD900252D97 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		3BD3231D161559ED00FB8DAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3BD3232016155A0100FB8DAE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD3232116155A0100FB8DAE /* CoreFoundation.framework in Frameworks */,
+				3BD3231E161559ED00FB8DAE /* CoreMotion.framework in Frameworks */,
 				3BD0EF3D1613FE9A00252D97 /* CoreLocation.framework in Frameworks */,
 				3BD0EF3B1613FE9300252D97 /* AVFoundation.framework in Frameworks */,
 				3BD0EF391613FE8B00252D97 /* MapKit.framework in Frameworks */,
@@ -117,6 +123,8 @@
 		3BD0EEFC1613FD3000252D97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BD3232016155A0100FB8DAE /* CoreFoundation.framework */,
+				3BD3231D161559ED00FB8DAE /* CoreMotion.framework */,
 				3BD0EF3C1613FE9A00252D97 /* CoreLocation.framework */,
 				3BD0EF3A1613FE9300252D97 /* AVFoundation.framework */,
 				3BD0EF381613FE8B00252D97 /* MapKit.framework */,
@@ -472,6 +480,7 @@
 				3BD0EF311613FD3100252D97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BD0EF321613FD3100252D97 /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +489,7 @@
 				3BD0EF341613FD3100252D97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CaptureSessionManager.h"
 #import <CoreLocation/CoreLocation.h>
+#include <CoreMotion/CoreMotion.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 @interface CameraViewController : UIViewController
 
 @property (strong) CaptureSessionManager *captureManager;
 @property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UILabel *tag;
 @property (retain, nonatomic) CLLocationManager *locManager;
-
+@property (retain, nonatomic) CMMotionManager *motionManager;
 @end
