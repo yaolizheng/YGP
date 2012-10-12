@@ -19,6 +19,7 @@
 - (id)init {
 	if ((self = [super init])) {
 		[self setCaptureSession:[[AVCaptureSession alloc] init]];
+        
 	}
 	return self;
 }
@@ -26,6 +27,7 @@
 - (void)addVideoPreviewLayer {
 	[self setPreviewLayer:[[AVCaptureVideoPreviewLayer alloc] initWithSession:[self captureSession]]];
 	[[self previewLayer] setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    
     
 }
 

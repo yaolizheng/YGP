@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "CJSONDeserializer.h"
 
 @interface ViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UILabel *lonLabel;
-@property (retain, nonatomic) IBOutlet UILabel *latLabel;
+
 @property (retain, nonatomic) CLLocationManager *locManager;
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @end

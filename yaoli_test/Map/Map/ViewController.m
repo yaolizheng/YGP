@@ -7,15 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "CJSONDeserializer.h"
+#import "TouchXML.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-@synthesize lonLabel;
-@synthesize latLabel;
 @synthesize locManager;
 @synthesize mapView;
 
@@ -23,12 +21,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     locManager = [[CLLocationManager alloc]init];
     locManager.delegate = self;
     locManager.desiredAccuracy = kCLLocationAccuracyBest;
     locManager.distanceFilter = 100;
     [locManager startUpdatingLocation];
-    NSString *urlAddress=@"http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&format=json&api_key=f3d3c93cac8adde7a46fc984158cd0e6&photo_id=3350763400&secret=2287e11458829fa5";
+    
+    /*NSString *urlAddress=@"http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&format=json&api_key=f3d3c93cac8adde7a46fc984158cd0e6&photo_id=3350763400&secret=2287e11458829fa5";
     
     NSURL *url = [NSURL URLWithString:urlAddress];
     //NSURLRequest *requestObj=[NSURLRequest requestWithURL:url];
@@ -49,15 +49,13 @@
     
     NSDictionary *photo = [items objectForKey:@"photo"];
     NSString *id = [photo objectForKey:@"id"];
-    self.lonLabel.text = [NSString stringWithFormat: @"ID: %@", id];
-    NSString *date = [photo objectForKey:@"dateuploaded"];
-    self.latLabel.text = [NSString stringWithFormat: @"Update Date: %@", date];
+    NSString *date = [photo objectForKey:@"dateuploaded"];*/
+
 }
 
 - (void)viewDidUnload
 {
-    [self setLonLabel:nil];
-    [self setLatLabel:nil];
+
     [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -85,14 +83,16 @@
     newRegion.center.longitude = longitude;
     newRegion.span.latitudeDelta = 0.004;
     newRegion.span.longitudeDelta = 0.004;
+    NSString *xml = @"<searchLocationsResponse nextPage=\"1\" mobletVersion=\"2.0\"xmlns=\"http://www.mfoundry.com/GBML/Schema\"muid=\"${muid}\" msid=\"${msid}\"><location distance=\"0.71\" phone=\"(415) 339-8890\" state=\"CA\" city=\"Sausalito\" address=\"80 Liberty Ship Way\" name=\"Fenzi Designs\" id=\"25416105\"/> <location distance=\"0.73\" phone=\"(415) 331-0444\" state=\"CA\" city=\"Sausalito\" address=\"85 Liberty Ship Way, #110a\" name=\"Bay Adventures\" id=\"21540217\"/>    </searchLocationsResponse>";
+    
+    NSMutableArray *ar=[[NSMutableArray alloc] init];
+    NSData *responseData = [xml dataUsingEncoding:NSUTF32BigEndianStringEncoding];
+    CXMLDocument *rssParser = [[CXMLDocument alloc] initWithData:responseData options:0 error:nil];
+    NSLog(@"rssParser %@",rssParser);    
+    
     float lo[3];
     float la[3];
-    lo[0] = -122.4509;
-    lo[1] = -122.4505;
-    lo[2] = -122.4513;
-    la[0] = 37.7807;
-    la[1] = 37.7801;
-    la[2] = 37.7812;
+    
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = latitude;
     coordinate.longitude = longitude;
@@ -100,7 +100,7 @@
     [annotation setCoordinate:coordinate];
     [annotation setTitle:@"I am here"];
     //[self.mapView removeAnnotation:self.mapView.annotations];
-    int i;
+    /*int i;
     for(i = 0; i < 3; i++) {
         CLLocationCoordinate2D coordinate2;
         coordinate2.latitude = la[i]	;
@@ -111,7 +111,7 @@
         [self.mapView addAnnotation:annotation2];
     }
         //[self.mapView removeAnnotation:self.mapView.annotations];
-    [self.mapView addAnnotation:annotation];
+    [self.mapView addAnnotation:annotation];*/
     
     [self.mapView setRegion:newRegion animated:YES];
 }

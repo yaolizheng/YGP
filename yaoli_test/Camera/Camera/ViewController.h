@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CaptureSessionManager.h"
+#import <CoreMotion/CoreMotion.h>
 @interface ViewController : UIViewController
 
 @property (strong) CaptureSessionManager *captureManager;
 @property (nonatomic, strong) UILabel *scanningLabel;
+//@property (nonatomic, strong) UILabel *tag;
+@property (retain, nonatomic) CMMotionManager *motionManager;
 @end

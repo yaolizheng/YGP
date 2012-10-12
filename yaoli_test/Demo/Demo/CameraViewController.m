@@ -69,13 +69,15 @@
 	[tag setTextColor:[UIColor blackColor]];
     [tag setText:@"TAG"];
     [tag setHidden:NO];
+    [tag setFrame:CGRectMake(100, 250, 50, 30)];
+    [tag setHidden:YES];
 	[[self view] addSubview:tag];
     
     float tagPosition = 15.0f;
     
 	[[captureManager captureSession] startRunning];
     
-
+    float tagAngle = 30.0f;
     motionManager = [[CMMotionManager alloc] init];
     motionManager.deviceMotionUpdateInterval = 1.0 / 60.0;
     if ([motionManager isDeviceMotionAvailable]) {
@@ -92,13 +94,29 @@
              if (positionIn360 < 0) {
                  positionIn360 = 360 + positionIn360;
              }
-             [label setText:[NSString stringWithFormat:@"Yaw: %.0f  PositionIn360: %d", yaw, positionIn360]];
-             if(yaw  > tagPosition + 150.0f||yaw < tagPosition - 100.0f)
+             [label setText:[NSString stringWithFormat:@"Yaw: %.0f  Pos360: %d", yaw, positionIn360]];
+             /*if(yaw  > tagPosition + 150.0f||yaw < tagPosition - 100.0f)
                  [tag setHidden:YES];
              else {
                  [tag setFrame:CGRectMake(yaw + 160.0f - tagPosition - 50.0f, 250, 50, 30)];
                  [tag setHidden:NO];
+             }*/
+             if(tagAngle + 23.0f >= positionIn360 && tagAngle - 23.0f <= positionIn360) {
+                 
+                 
+                 if(tagAngle - positionIn360 >= 0) {
+                     float offset = tan(tagAngle - (float)positionIn360) * 160.0f / tan(23.0f);
+                     [tag setFrame:CGRectMake(160 - offset, 250, 50, 30)];
+                     [tag setHidden:NO];
+                 }
+                 else {
+                     float offset = tan((float)positionIn360 - tagAngle) * 160.0f / tan(23.0f);
+                     [tag setFrame:CGRectMake(160 + offset, 250, 50, 30)];
+                     [tag setHidden:NO];
+                 }
              }
+             else
+                 [tag setHidden:YES];
          
          }];
         

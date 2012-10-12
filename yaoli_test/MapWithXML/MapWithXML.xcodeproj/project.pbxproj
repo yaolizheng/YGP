@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BCDED0F1627F031001F56EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED0E1627F031001F56EE /* UIKit.framework */; };
+		3BCDED111627F031001F56EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED101627F031001F56EE /* Foundation.framework */; };
+		3BCDED131627F031001F56EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED121627F031001F56EE /* CoreGraphics.framework */; };
+		3BCDED191627F031001F56EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDED171627F031001F56EE /* InfoPlist.strings */; };
+		3BCDED1B1627F031001F56EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED1A1627F031001F56EE /* main.m */; };
+		3BCDED1F1627F031001F56EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED1E1627F031001F56EE /* AppDelegate.m */; };
+		3BCDED221627F031001F56EE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDED201627F031001F56EE /* MainStoryboard_iPhone.storyboard */; };
+		3BCDED251627F031001F56EE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDED231627F031001F56EE /* MainStoryboard_iPad.storyboard */; };
+		3BCDED281627F031001F56EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED271627F031001F56EE /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BCDED301627F032001F56EE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED2F1627F032001F56EE /* SenTestingKit.framework */; };
+		3BCDED311627F032001F56EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED0E1627F031001F56EE /* UIKit.framework */; };
+		3BCDED321627F032001F56EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED101627F031001F56EE /* Foundation.framework */; };
+		3BCDED3A1627F032001F56EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDED381627F032001F56EE /* InfoPlist.strings */; };
+		3BCDED3D1627F032001F56EE /* MapWithXMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED3C1627F032001F56EE /* MapWithXMLTests.m */; };
+		3BCDED471627F0AF001F56EE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED461627F0AF001F56EE /* CoreLocation.framework */; };
+		3BCDED491627F0B4001F56EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED481627F0B4001F56EE /* MapKit.framework */; };
+		3BCDED671627F285001F56EE /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED4C1627F283001F56EE /* CXMLDocument_CreationExtensions.m */; };
+		3BCDED681627F285001F56EE /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED4E1627F283001F56EE /* CXMLNode_CreationExtensions.m */; };
+		3BCDED691627F285001F56EE /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED501627F283001F56EE /* CXHTMLDocument.m */; };
+		3BCDED6A1627F285001F56EE /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED521627F283001F56EE /* CXMLDocument_PrivateExtensions.m */; };
+		3BCDED6B1627F285001F56EE /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED541627F284001F56EE /* CXMLDocument.m */; };
+		3BCDED6C1627F285001F56EE /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED561627F284001F56EE /* CXMLElement_CreationExtensions.m */; };
+		3BCDED6D1627F285001F56EE /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED581627F284001F56EE /* CXMLElement_ElementTreeExtensions.m */; };
+		3BCDED6E1627F285001F56EE /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED5A1627F284001F56EE /* CXMLElement.m */; };
+		3BCDED6F1627F285001F56EE /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED5C1627F284001F56EE /* CXMLNamespaceNode.m */; };
+		3BCDED701627F285001F56EE /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED5E1627F284001F56EE /* CXMLNode_PrivateExtensions.m */; };
+		3BCDED711627F285001F56EE /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED601627F284001F56EE /* CXMLNode_XPathExtensions.m */; };
+		3BCDED721627F285001F56EE /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED621627F285001F56EE /* CXMLNode.m */; };
+		3BCDED731627F285001F56EE /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED651627F285001F56EE /* CTidy.m */; };
+		3BCDED741627F2E4001F56EE /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED501627F283001F56EE /* CXHTMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BCDED751627F48F001F56EE /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED541627F284001F56EE /* CXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BCDED761627F526001F56EE /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED621627F285001F56EE /* CXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BCDED781627FDC1001F56EE /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDED771627FDC1001F56EE /* Entitlements.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BCDED331627F032001F56EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BCDED011627F031001F56EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BCDED091627F031001F56EE;
+			remoteInfo = MapWithXML;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BCDED0A1627F031001F56EE /* MapWithXML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapWithXML.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCDED0E1627F031001F56EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3BCDED101627F031001F56EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3BCDED121627F031001F56EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3BCDED161627F031001F56EE /* MapWithXML-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapWithXML-Info.plist"; sourceTree = "<group>"; };
+		3BCDED181627F031001F56EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BCDED1A1627F031001F56EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BCDED1C1627F031001F56EE /* MapWithXML-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapWithXML-Prefix.pch"; sourceTree = "<group>"; };
+		3BCDED1D1627F031001F56EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BCDED1E1627F031001F56EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BCDED211627F031001F56EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3BCDED241627F031001F56EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3BCDED261627F031001F56EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BCDED271627F031001F56EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BCDED2E1627F032001F56EE /* MapWithXMLTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapWithXMLTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCDED2F1627F032001F56EE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3BCDED371627F032001F56EE /* MapWithXMLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapWithXMLTests-Info.plist"; sourceTree = "<group>"; };
+		3BCDED391627F032001F56EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BCDED3B1627F032001F56EE /* MapWithXMLTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapWithXMLTests.h; sourceTree = "<group>"; };
+		3BCDED3C1627F032001F56EE /* MapWithXMLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapWithXMLTests.m; sourceTree = "<group>"; };
+		3BCDED461627F0AF001F56EE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3BCDED481627F0B4001F56EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3BCDED4B1627F283001F56EE /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		3BCDED4C1627F283001F56EE /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		3BCDED4D1627F283001F56EE /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		3BCDED4E1627F283001F56EE /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		3BCDED4F1627F283001F56EE /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		3BCDED501627F283001F56EE /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		3BCDED511627F283001F56EE /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		3BCDED521627F283001F56EE /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		3BCDED531627F283001F56EE /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		3BCDED541627F284001F56EE /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		3BCDED551627F284001F56EE /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		3BCDED561627F284001F56EE /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		3BCDED571627F284001F56EE /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		3BCDED581627F284001F56EE /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		3BCDED591627F284001F56EE /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		3BCDED5A1627F284001F56EE /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		3BCDED5B1627F284001F56EE /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		3BCDED5C1627F284001F56EE /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		3BCDED5D1627F284001F56EE /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		3BCDED5E1627F284001F56EE /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		3BCDED5F1627F284001F56EE /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		3BCDED601627F284001F56EE /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		3BCDED611627F284001F56EE /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		3BCDED621627F285001F56EE /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		3BCDED641627F285001F56EE /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		3BCDED651627F285001F56EE /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		3BCDED661627F285001F56EE /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		3BCDED771627FDC1001F56EE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BCDED071627F031001F56EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCDED491627F0B4001F56EE /* MapKit.framework in Frameworks */,
+				3BCDED471627F0AF001F56EE /* CoreLocation.framework in Frameworks */,
+				3BCDED0F1627F031001F56EE /* UIKit.framework in Frameworks */,
+				3BCDED111627F031001F56EE /* Foundation.framework in Frameworks */,
+				3BCDED131627F031001F56EE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCDED2A1627F032001F56EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCDED301627F032001F56EE /* SenTestingKit.framework in Frameworks */,
+				3BCDED311627F032001F56EE /* UIKit.framework in Frameworks */,
+				3BCDED321627F032001F56EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BCDECFF1627F031001F56EE = {
+			isa = PBXGroup;
+			children = (
+				3BCDED771627FDC1001F56EE /* Entitlements.plist */,
+				3BCDED481627F0B4001F56EE /* MapKit.framework */,
+				3BCDED461627F0AF001F56EE /* CoreLocation.framework */,
+				3BCDED141627F031001F56EE /* MapWithXML */,
+				3BCDED351627F032001F56EE /* MapWithXMLTests */,
+				3BCDED0D1627F031001F56EE /* Frameworks */,
+				3BCDED0B1627F031001F56EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BCDED0B1627F031001F56EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED0A1627F031001F56EE /* MapWithXML.app */,
+				3BCDED2E1627F032001F56EE /* MapWithXMLTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BCDED0D1627F031001F56EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED0E1627F031001F56EE /* UIKit.framework */,
+				3BCDED101627F031001F56EE /* Foundation.framework */,
+				3BCDED121627F031001F56EE /* CoreGraphics.framework */,
+				3BCDED2F1627F032001F56EE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BCDED141627F031001F56EE /* MapWithXML */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED4A1627F283001F56EE /* Creation */,
+				3BCDED4F1627F283001F56EE /* CXHTMLDocument.h */,
+				3BCDED501627F283001F56EE /* CXHTMLDocument.m */,
+				3BCDED511627F283001F56EE /* CXMLDocument_PrivateExtensions.h */,
+				3BCDED521627F283001F56EE /* CXMLDocument_PrivateExtensions.m */,
+				3BCDED531627F283001F56EE /* CXMLDocument.h */,
+				3BCDED541627F284001F56EE /* CXMLDocument.m */,
+				3BCDED551627F284001F56EE /* CXMLElement_CreationExtensions.h */,
+				3BCDED561627F284001F56EE /* CXMLElement_CreationExtensions.m */,
+				3BCDED571627F284001F56EE /* CXMLElement_ElementTreeExtensions.h */,
+				3BCDED581627F284001F56EE /* CXMLElement_ElementTreeExtensions.m */,
+				3BCDED591627F284001F56EE /* CXMLElement.h */,
+				3BCDED5A1627F284001F56EE /* CXMLElement.m */,
+				3BCDED5B1627F284001F56EE /* CXMLNamespaceNode.h */,
+				3BCDED5C1627F284001F56EE /* CXMLNamespaceNode.m */,
+				3BCDED5D1627F284001F56EE /* CXMLNode_PrivateExtensions.h */,
+				3BCDED5E1627F284001F56EE /* CXMLNode_PrivateExtensions.m */,
+				3BCDED5F1627F284001F56EE /* CXMLNode_XPathExtensions.h */,
+				3BCDED601627F284001F56EE /* CXMLNode_XPathExtensions.m */,
+				3BCDED611627F284001F56EE /* CXMLNode.h */,
+				3BCDED621627F285001F56EE /* CXMLNode.m */,
+				3BCDED631627F285001F56EE /* Tidy */,
+				3BCDED661627F285001F56EE /* TouchXML.h */,
+				3BCDED1D1627F031001F56EE /* AppDelegate.h */,
+				3BCDED1E1627F031001F56EE /* AppDelegate.m */,
+				3BCDED201627F031001F56EE /* MainStoryboard_iPhone.storyboard */,
+				3BCDED231627F031001F56EE /* MainStoryboard_iPad.storyboard */,
+				3BCDED261627F031001F56EE /* ViewController.h */,
+				3BCDED271627F031001F56EE /* ViewController.m */,
+				3BCDED151627F031001F56EE /* Supporting Files */,
+			);
+			path = MapWithXML;
+			sourceTree = "<group>";
+		};
+		3BCDED151627F031001F56EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED161627F031001F56EE /* MapWithXML-Info.plist */,
+				3BCDED171627F031001F56EE /* InfoPlist.strings */,
+				3BCDED1A1627F031001F56EE /* main.m */,
+				3BCDED1C1627F031001F56EE /* MapWithXML-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BCDED351627F032001F56EE /* MapWithXMLTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED3B1627F032001F56EE /* MapWithXMLTests.h */,
+				3BCDED3C1627F032001F56EE /* MapWithXMLTests.m */,
+				3BCDED361627F032001F56EE /* Supporting Files */,
+			);
+			path = MapWithXMLTests;
+			sourceTree = "<group>";
+		};
+		3BCDED361627F032001F56EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED371627F032001F56EE /* MapWithXMLTests-Info.plist */,
+				3BCDED381627F032001F56EE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BCDED4A1627F283001F56EE /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED4B1627F283001F56EE /* CXMLDocument_CreationExtensions.h */,
+				3BCDED4C1627F283001F56EE /* CXMLDocument_CreationExtensions.m */,
+				3BCDED4D1627F283001F56EE /* CXMLNode_CreationExtensions.h */,
+				3BCDED4E1627F283001F56EE /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		3BCDED631627F285001F56EE /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDED641627F285001F56EE /* CTidy.h */,
+				3BCDED651627F285001F56EE /* CTidy.m */,
+			);
+			path = Tidy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BCDED091627F031001F56EE /* MapWithXML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCDED401627F032001F56EE /* Build configuration list for PBXNativeTarget "MapWithXML" */;
+			buildPhases = (
+				3BCDED061627F031001F56EE /* Sources */,
+				3BCDED071627F031001F56EE /* Frameworks */,
+				3BCDED081627F031001F56EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapWithXML;
+			productName = MapWithXML;
+			productReference = 3BCDED0A1627F031001F56EE /* MapWithXML.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BCDED2D1627F032001F56EE /* MapWithXMLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCDED431627F032001F56EE /* Build configuration list for PBXNativeTarget "MapWithXMLTests" */;
+			buildPhases = (
+				3BCDED291627F032001F56EE /* Sources */,
+				3BCDED2A1627F032001F56EE /* Frameworks */,
+				3BCDED2B1627F032001F56EE /* Resources */,
+				3BCDED2C1627F032001F56EE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BCDED341627F032001F56EE /* PBXTargetDependency */,
+			);
+			name = MapWithXMLTests;
+			productName = MapWithXMLTests;
+			productReference = 3BCDED2E1627F032001F56EE /* MapWithXMLTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BCDED011627F031001F56EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Yaoli Zheng";
+			};
+			buildConfigurationList = 3BCDED041627F031001F56EE /* Build configuration list for PBXProject "MapWithXML" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3BCDECFF1627F031001F56EE;
+			productRefGroup = 3BCDED0B1627F031001F56EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BCDED091627F031001F56EE /* MapWithXML */,
+				3BCDED2D1627F032001F56EE /* MapWithXMLTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BCDED081627F031001F56EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCDED191627F031001F56EE /* InfoPlist.strings in Resources */,
+				3BCDED221627F031001F56EE /* MainStoryboard_iPhone.storyboard in Resources */,
+				3BCDED251627F031001F56EE /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCDED2B1627F032001F56EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCDED3A1627F032001F56EE /* InfoPlist.strings in Resources */,
+				3BCDED781627FDC1001F56EE /* Entitlements.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BCDED2C1627F032001F56EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BCDED061627F031001F56EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCDED761627F526001F56EE /* CXMLNode.m in Sources */,
+				3BCDED751627F48F001F56EE /* CXMLDocument.m in Sources */,
+				3BCDED741627F2E4001F56EE /* CXHTMLDocument.m in Sources */,
+				3BCDED1B1627F031001F56EE /* main.m in Sources */,
+				3BCDED1F1627F031001F56EE /* AppDelegate.m in Sources */,
+				3BCDED281627F031001F56EE /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCDED291627F032001F56EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCDED3D1627F032001F56EE /* MapWithXMLTests.m in Sources */,
+				3BCDED671627F285001F56EE /* CXMLDocument_CreationExtensions.m in Sources */,
+				3BCDED681627F285001F56EE /* CXMLNode_CreationExtensions.m in Sources */,
+				3BCDED691627F285001F56EE /* CXHTMLDocument.m in Sources */,
+				3BCDED6A1627F285001F56EE /* CXMLDocument_PrivateExtensions.m in Sources */,
+				3BCDED6B1627F285001F56EE /* CXMLDocument.m in Sources */,
+				3BCDED6C1627F285001F56EE /* CXMLElement_CreationExtensions.m in Sources */,
+				3BCDED6D1627F285001F56EE /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				3BCDED6E1627F285001F56EE /* CXMLElement.m in Sources */,
+				3BCDED6F1627F285001F56EE /* CXMLNamespaceNode.m in Sources */,
+				3BCDED701627F285001F56EE /* CXMLNode_PrivateExtensions.m in Sources */,
+				3BCDED711627F285001F56EE /* CXMLNode_XPathExtensions.m in Sources */,
+				3BCDED721627F285001F56EE /* CXMLNode.m in Sources */,
+				3BCDED731627F285001F56EE /* CTidy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BCDED341627F032001F56EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BCDED091627F031001F56EE /* MapWithXML */;
+			targetProxy = 3BCDED331627F032001F56EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3BCDED171627F031001F56EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCDED181627F031001F56EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3BCDED201627F031001F56EE /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCDED211627F031001F56EE /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3BCDED231627F031001F56EE /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCDED241627F031001F56EE /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3BCDED381627F032001F56EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCDED391627F032001F56EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BCDED3E1627F032001F56EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BCDED3F1627F032001F56EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BCDED411627F032001F56EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapWithXML/MapWithXML-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Applications/Xcode.app/contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/usr/include/libxml2/**";
+				INFOPLIST_FILE = "MapWithXML/MapWithXML-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3BCDED421627F032001F56EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapWithXML/MapWithXML-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Applications/Xcode.app/contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/usr/include/libxml2/**";
+				INFOPLIST_FILE = "MapWithXML/MapWithXML-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3BCDED441627F032001F56EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MapWithXML.app/MapWithXML";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapWithXML/MapWithXML-Prefix.pch";
+				INFOPLIST_FILE = "MapWithXMLTests/MapWithXMLTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3BCDED451627F032001F56EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MapWithXML.app/MapWithXML";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapWithXML/MapWithXML-Prefix.pch";
+				INFOPLIST_FILE = "MapWithXMLTests/MapWithXMLTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BCDED041627F031001F56EE /* Build configuration list for PBXProject "MapWithXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCDED3E1627F032001F56EE /* Debug */,
+				3BCDED3F1627F032001F56EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCDED401627F032001F56EE /* Build configuration list for PBXNativeTarget "MapWithXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCDED411627F032001F56EE /* Debug */,
+				3BCDED421627F032001F56EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCDED431627F032001F56EE /* Build configuration list for PBXNativeTarget "MapWithXMLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCDED441627F032001F56EE /* Debug */,
+				3BCDED451627F032001F56EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BCDED011627F031001F56EE /* Project object */;
+}
