@@ -40,6 +40,17 @@
 		3BCDED751627F48F001F56EE /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED541627F284001F56EE /* CXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3BCDED761627F526001F56EE /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED621627F285001F56EE /* CXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3BCDED781627FDC1001F56EE /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDED771627FDC1001F56EE /* Entitlements.plist */; };
+		3BD474E8162D38110033E40D /* xmlfile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3BD474E7162D38110033E40D /* xmlfile.xml */; };
+		3BD474EA162D39EB0033E40D /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED5A1627F284001F56EE /* CXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BD474EB162D3A130033E40D /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED5C1627F284001F56EE /* CXMLNamespaceNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BD474EC162D3BF00033E40D /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED4C1627F283001F56EE /* CXMLDocument_CreationExtensions.m */; };
+		3BD474ED162D3BF50033E40D /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED4E1627F283001F56EE /* CXMLNode_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BD474EE162D3BF80033E40D /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED521627F283001F56EE /* CXMLDocument_PrivateExtensions.m */; };
+		3BD474EF162D3BFC0033E40D /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED561627F284001F56EE /* CXMLElement_CreationExtensions.m */; };
+		3BD474F0162D3C010033E40D /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED581627F284001F56EE /* CXMLElement_ElementTreeExtensions.m */; };
+		3BD474F1162D3C060033E40D /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED601627F284001F56EE /* CXMLNode_XPathExtensions.m */; };
+		3BD474F2162D3C0B0033E40D /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED5E1627F284001F56EE /* CXMLNode_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BD474F3162D3C120033E40D /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDED651627F285001F56EE /* CTidy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +114,7 @@
 		3BCDED651627F285001F56EE /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
 		3BCDED661627F285001F56EE /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
 		3BCDED771627FDC1001F56EE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		3BD474E7162D38110033E40D /* xmlfile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xmlfile.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +220,7 @@
 				3BCDED171627F031001F56EE /* InfoPlist.strings */,
 				3BCDED1A1627F031001F56EE /* main.m */,
 				3BCDED1C1627F031001F56EE /* MapWithXML-Prefix.pch */,
+				3BD474E7162D38110033E40D /* xmlfile.xml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -325,6 +338,7 @@
 				3BCDED191627F031001F56EE /* InfoPlist.strings in Resources */,
 				3BCDED221627F031001F56EE /* MainStoryboard_iPhone.storyboard in Resources */,
 				3BCDED251627F031001F56EE /* MainStoryboard_iPad.storyboard in Resources */,
+				3BD474E8162D38110033E40D /* xmlfile.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD474F3162D3C120033E40D /* CTidy.m in Sources */,
+				3BD474F2162D3C0B0033E40D /* CXMLNode_PrivateExtensions.m in Sources */,
+				3BD474F1162D3C060033E40D /* CXMLNode_XPathExtensions.m in Sources */,
+				3BD474F0162D3C010033E40D /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				3BD474EF162D3BFC0033E40D /* CXMLElement_CreationExtensions.m in Sources */,
+				3BD474EE162D3BF80033E40D /* CXMLDocument_PrivateExtensions.m in Sources */,
+				3BD474ED162D3BF50033E40D /* CXMLNode_CreationExtensions.m in Sources */,
+				3BD474EC162D3BF00033E40D /* CXMLDocument_CreationExtensions.m in Sources */,
+				3BD474EB162D3A130033E40D /* CXMLNamespaceNode.m in Sources */,
+				3BD474EA162D39EB0033E40D /* CXMLElement.m in Sources */,
 				3BCDED761627F526001F56EE /* CXMLNode.m in Sources */,
 				3BCDED751627F48F001F56EE /* CXMLDocument.m in Sources */,
 				3BCDED741627F2E4001F56EE /* CXHTMLDocument.m in Sources */,

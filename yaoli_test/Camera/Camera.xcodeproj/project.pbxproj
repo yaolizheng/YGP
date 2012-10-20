@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3A931A162A3379008434ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A9319162A3379008434ED /* CoreLocation.framework */; };
+		3B3A931C162A470E008434ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A931B162A470E008434ED /* MapKit.framework */; };
 		3BC5D4E416221A700037BD73 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC5D4E316221A700037BD73 /* CoreMotion.framework */; };
 		3BD0EEED1613F90B00252D97 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0EEEC1613F90B00252D97 /* AVFoundation.framework */; };
 		3BD0F0AF1613C2F100A3B099 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0F0AE1613C2F100A3B099 /* UIKit.framework */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B3A9319162A3379008434ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3B3A931B162A470E008434ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3BC5D4E316221A700037BD73 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3BD0EEEC1613F90B00252D97 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3BD0F0AA1613C2F100A3B099 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3A931C162A470E008434ED /* MapKit.framework in Frameworks */,
+				3B3A931A162A3379008434ED /* CoreLocation.framework in Frameworks */,
 				3BC5D4E416221A700037BD73 /* CoreMotion.framework in Frameworks */,
 				3BD0EEED1613F90B00252D97 /* AVFoundation.framework in Frameworks */,
 				3BD0F0AF1613C2F100A3B099 /* UIKit.framework in Frameworks */,
@@ -92,7 +98,6 @@
 		3BD0F09F1613C2F100A3B099 = {
 			isa = PBXGroup;
 			children = (
-				3BC5D4E316221A700037BD73 /* CoreMotion.framework */,
 				3BD0F0B41613C2F100A3B099 /* Camera */,
 				3BD0F0D51613C2F100A3B099 /* CameraTests */,
 				3BD0F0AD1613C2F100A3B099 /* Frameworks */,
@@ -112,6 +117,9 @@
 		3BD0F0AD1613C2F100A3B099 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B3A931B162A470E008434ED /* MapKit.framework */,
+				3B3A9319162A3379008434ED /* CoreLocation.framework */,
+				3BC5D4E316221A700037BD73 /* CoreMotion.framework */,
 				3BD0EEEC1613F90B00252D97 /* AVFoundation.framework */,
 				3BD0F0AE1613C2F100A3B099 /* UIKit.framework */,
 				3BD0F0B01613C2F100A3B099 /* Foundation.framework */,

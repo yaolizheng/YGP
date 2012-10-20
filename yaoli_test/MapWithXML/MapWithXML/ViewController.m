@@ -28,28 +28,56 @@
     locManager.distanceFilter = 100;
     [locManager startUpdatingLocation];
     
-    /*NSString *urlAddress=@"http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&format=json&api_key=f3d3c93cac8adde7a46fc984158cd0e6&photo_id=3350763400&secret=2287e11458829fa5";
-     
-     NSURL *url = [NSURL URLWithString:urlAddress];
-     //NSURLRequest *requestObj=[NSURLRequest requestWithURL:url];
-     NSError *error;
-     NSString *page = [NSString stringWithContentsOfURL:url
-     encoding:NSASCIIStringEncoding error:&error];
-     
-     page = [page stringByReplacingOccurrencesOfString:@"jsonFlickrApi("
-     withString:@""];
-     page = [page stringByReplacingOccurrencesOfString:@")"
-     withString:@""];
-     NSLog(@"%@", page);
-     NSData *jsonData = [page dataUsingEncoding:NSUTF32BigEndianStringEncoding];
-     error = nil;
-     NSDictionary *items = [[CJSONDeserializer deserializer] deserializeAsDictionary:jsonData error:&error];
-     NSLog(@"total items: %d", [items count]);
-     NSLog(@"error: %@", [error localizedDescription]);
-     
-     NSDictionary *photo = [items objectForKey:@"photo"];
-     NSString *id = [photo objectForKey:@"id"];
-     NSString *date = [photo objectForKey:@"dateuploaded"];*/
+    NSString *XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"xmlfile.xml"];
+    //取得数据
+    NSData *XMLData = [NSData dataWithContentsOfFile:XMLPath];
+    //生成CXMLDocument对象
+    CXMLDocument *document = [[CXMLDocument alloc] initWithData:XMLData
+                                                        options:0
+                                                          error:nil
+                              ];
+    NSLog (@"Document  :%@ \n",document);
+    NSArray *location = NULL;
+    NSDictionary *mappings = [NSDictionary dictionaryWithObject:@"http://www.mfoundry.com/GBML/Schema" forKey:@"gbmluri"];
+    location = [document nodesForXPath:@"//gbmluri:searchLocationsResponse/gbmluri:location" namespaceMappings:mappings error:nil];
+    
+    //books = [document nodesForXPath:@"//searchLocationsResponse" error:nil];
+    NSLog (@"err  :%@ \n",location);
+    NSString *strValue;
+    NSString *strName;
+    for (CXMLElement *element in location)
+    {
+        if ([element isKindOfClass:[CXMLElement class]])
+        {
+            NSMutableDictionary *object=[[NSMutableDictionary alloc] init];
+            NSLog(@"--------------------------------");  
+            NSMutableDictionary *objectAttributes=[[NSMutableDictionary alloc] init];
+            NSArray *arAttr=[element attributes];
+            NSUInteger i, countAttr = [arAttr count];
+            for (i = 0; i < countAttr; i++) {
+                strValue=[[arAttr objectAtIndex:i] stringValue];
+                strName=[[arAttr objectAtIndex:i] name];
+                if(strValue && strName){
+                    [objectAttributes setValue:strValue forKey:strName];
+                    NSLog(@"name: %@", strName);
+                    NSLog(@"value: %@", strValue);
+                }
+            }
+            
+            /*for (int i = 0; i < [element childCount]; i++)
+            {
+                if (![[[element children] objectAtIndex:i] isKindOfClass:[CXMLElement class]])
+                {
+                    [item setObject:[[element childAtIndex:i] stringValue]
+                             forKey:[[element childAtIndex:i] name]
+                     ];
+                    NSLog(@"%@", [[element childAtIndex:i] stringValue]);
+                }
+            }*/
+            //NSLog(@"%@", item);
+        }
+    }
+
     
 }
 
@@ -83,16 +111,6 @@
     newRegion.center.longitude = longitude;
     newRegion.span.latitudeDelta = 0.004;
     newRegion.span.longitudeDelta = 0.004;
-    NSString *xml = @"<searchLocationsResponse> <location distance=\"0.71\" phone=\"(415) 339-8890\" state=\"CA\" city=\"Sausalito\" address=\"80 Liberty Ship Way\" name=\"Fenzi Designs\" id=\"25416105\"/> <location distance=\"0.73\" phone=\"(415) 331-0444\" state=\"CA\" city=\"Sausalito\" address=\"85 Liberty Ship Way, #110a\" name=\"Bay Adventures\" id=\"21540217\"/></searchLocationsResponse>";
-    
-    NSString *error = nil;
-    
-    NSLog(@"String data: %@ \n", xml);
-    
-    NSError *theError = NULL;
-    CXMLDocument *theXMLDocument = [[[CXMLDocument alloc] initWithXMLString:xml options:0 error:&theError] autorelease];
-    NSLog (@"Err  :%@ \n",theError);
-    NSLog (@"Document  :%@ \n",theXMLDocument);
 
     
     CLLocationCoordinate2D coordinate;
