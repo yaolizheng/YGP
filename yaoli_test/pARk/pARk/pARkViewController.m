@@ -48,6 +48,7 @@
 #import "pARkViewController.h"
 #import "PlaceOfInterest.h"
 #import "ARView.h"
+#import "TouchXML.h"
 
 #import <CoreLocation/CoreLocation.h>
 
@@ -65,26 +66,100 @@
 {
 	[super viewDidLoad];
 	ARView *arView = (ARView *)self.view;
+    
+    
+    NSString *XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"xmlfile.xml"];
+    //取得数据
+    NSData *XMLData = [NSData dataWithContentsOfFile:XMLPath];
+    //生成CXMLDocument对象
+    CXMLDocument *document = [[CXMLDocument alloc] initWithData:XMLData
+                                                        options:0
+                                                          error:nil
+                              ];
+    NSArray *location = NULL;
+    NSDictionary *mappings = [NSDictionary dictionaryWithObject:@"http://www.mfoundry.com/GBML/Schema" forKey:@"gbmluri"];
+    location = [document nodesForXPath:@"//gbmluri:searchLocationsResponse/gbmluri:location" namespaceMappings:mappings error:nil];
+
+    NSString *strValue;
+    NSString *strName;
+    
+    int count = 0;
+    for (CXMLElement *element in location)
+    {
+        if ([element isKindOfClass:[CXMLElement class]])
+        {
+            count = count + 1;
+        }
+    }
+    NSString *poiNames[count + 1];
+    CLLocationCoordinate2D poiCoords[count + 1];
+    count = 0;
+    for (CXMLElement *element in location)
+    {
+        if ([element isKindOfClass:[CXMLElement class]])
+        {
+            NSArray *arAttr=[element attributes];
+            NSUInteger i, countAttr = [arAttr count];
+            double lon;
+            double lat;
+            for (i = 0; i < countAttr; i++) {
+                strValue=[[arAttr objectAtIndex:i] stringValue];
+                strName=[[arAttr objectAtIndex:i] name];
+                
+                if(strValue && strName){
+                    if([strName isEqualToString:@"lon"] == 1) {
+                        lon = [strValue doubleValue];
+                    }
+                    if([strName isEqualToString:@"lat"] == 1) {
+                        lat = [strValue doubleValue];
+                    }
+                   if([strName isEqualToString: @"name"] == 1) {
+                        poiNames[count] = strValue;
+                   }
+                }
+                
+            }
+            
+            CLLocationCoordinate2D location;
+            
+            location.latitude = lat;
+            location.longitude = lon;
+            poiCoords[count] = location;
+            count = count + 1;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 	
 	// Create array of hard-coded places-of-interest, in this case some famous parks
-    const char *poiNames[] = {"Central Park NY",
+    /*const char *poiNames[] = {"Central Park NY",
                               "Golden Gate Park SF",
                               "Balboa Park SD",
                               "Hyde Park UK",
                               "Mont Royal QC",
-                              "Retiro Park ES"};
+                              "Retiro Park ES"};*/
 	
-    CLLocationCoordinate2D poiCoords[] = {{40.7711329, -73.9741874},
+/*CLLocationCoordinate2D poiCoords[] = {{40.7711329, -73.9741874},
                                           {37.7690400, -122.4835193},
                                           {32.7343822, -117.1441227},
                                           {51.5068670, -0.1708030},
                                           {45.5126399, -73.6802448},
-                                          {40.4152519, -3.6887466}};
+                                          {40.4152519, -3.6887466}};*/
                                           
-    int numPois = sizeof(poiCoords) / sizeof(CLLocationCoordinate2D);	
+    int numPois = sizeof(poiCoords) / sizeof(CLLocationCoordinate2D) - 1;
 		
 	NSMutableArray *placesOfInterest = [NSMutableArray arrayWithCapacity:numPois];
-	for (int i = 0; i < numPois; i++) {
+   	for (int i = 0; i < numPois; i++) {
 		UILabel *label = [[[UILabel alloc] init] autorelease];
 		label.adjustsFontSizeToFitWidth = NO;
 		label.opaque = NO;
@@ -92,10 +167,10 @@
 		label.center = CGPointMake(200.0f, 200.0f);
 		label.textAlignment = UITextAlignmentCenter;
 		label.textColor = [UIColor whiteColor];
-		label.text = [NSString stringWithCString:poiNames[i] encoding:NSASCIIStringEncoding];		
-		CGSize size = [label.text sizeWithFont:label.font];
+        label.text = poiNames[i];
+        CGSize size = [label.text sizeWithFont:label.font];
 		label.bounds = CGRectMake(0.0f, 0.0f, size.width, size.height);
-				
+        
 		PlaceOfInterest *poi = [PlaceOfInterest placeOfInterestWithView:label at:[[[CLLocation alloc] initWithLatitude:poiCoords[i].latitude longitude:poiCoords[i].longitude] autorelease]];
 		[placesOfInterest insertObject:poi atIndex:i];
 	}
