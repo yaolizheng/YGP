@@ -12,6 +12,7 @@
 #import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UINavigationBar *NavigationBar;
 
 
 @property (retain, nonatomic) CLLocationManager *locManager;

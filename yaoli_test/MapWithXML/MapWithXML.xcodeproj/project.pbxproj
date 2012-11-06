@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC6802F163A668E00EE696C /* citibank.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 3BC6802E163A668E00EE696C /* citibank.bmp */; };
+		3BC68033163A6E0200EE696C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC68032163A6E0200EE696C /* DetailViewController.m */; };
+		3BC9684A1647A07A008374A1 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC968491647A07A008374A1 /* WebService.m */; };
+		3BC9684D1647ACE9008374A1 /* PlaceOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9684C1647ACE9008374A1 /* PlaceOfInterest.m */; };
+		3BC9684F1647ADAF008374A1 /* PlaceOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9684C1647ACE9008374A1 /* PlaceOfInterest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3BCDED0F1627F031001F56EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED0E1627F031001F56EE /* UIKit.framework */; };
 		3BCDED111627F031001F56EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED101627F031001F56EE /* Foundation.framework */; };
 		3BCDED131627F031001F56EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCDED121627F031001F56EE /* CoreGraphics.framework */; };
@@ -64,6 +69,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BC6802E163A668E00EE696C /* citibank.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = citibank.bmp; sourceTree = "<group>"; };
+		3BC68031163A6E0200EE696C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3BC68032163A6E0200EE696C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3BC968481647A07A008374A1 /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
+		3BC968491647A07A008374A1 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
+		3BC9684B1647ACE9008374A1 /* PlaceOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceOfInterest.h; sourceTree = "<group>"; };
+		3BC9684C1647ACE9008374A1 /* PlaceOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceOfInterest.m; sourceTree = "<group>"; };
 		3BCDED0A1627F031001F56EE /* MapWithXML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapWithXML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCDED0E1627F031001F56EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3BCDED101627F031001F56EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +191,8 @@
 		3BCDED141627F031001F56EE /* MapWithXML */ = {
 			isa = PBXGroup;
 			children = (
+				3BC9684B1647ACE9008374A1 /* PlaceOfInterest.h */,
+				3BC9684C1647ACE9008374A1 /* PlaceOfInterest.m */,
 				3BCDED4A1627F283001F56EE /* Creation */,
 				3BCDED4F1627F283001F56EE /* CXHTMLDocument.h */,
 				3BCDED501627F283001F56EE /* CXHTMLDocument.m */,
@@ -209,6 +223,10 @@
 				3BCDED261627F031001F56EE /* ViewController.h */,
 				3BCDED271627F031001F56EE /* ViewController.m */,
 				3BCDED151627F031001F56EE /* Supporting Files */,
+				3BC68031163A6E0200EE696C /* DetailViewController.h */,
+				3BC68032163A6E0200EE696C /* DetailViewController.m */,
+				3BC968481647A07A008374A1 /* WebService.h */,
+				3BC968491647A07A008374A1 /* WebService.m */,
 			);
 			path = MapWithXML;
 			sourceTree = "<group>";
@@ -216,6 +234,7 @@
 		3BCDED151627F031001F56EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BC6802E163A668E00EE696C /* citibank.bmp */,
 				3BCDED161627F031001F56EE /* MapWithXML-Info.plist */,
 				3BCDED171627F031001F56EE /* InfoPlist.strings */,
 				3BCDED1A1627F031001F56EE /* main.m */,
@@ -339,6 +358,7 @@
 				3BCDED221627F031001F56EE /* MainStoryboard_iPhone.storyboard in Resources */,
 				3BCDED251627F031001F56EE /* MainStoryboard_iPad.storyboard in Resources */,
 				3BD474E8162D38110033E40D /* xmlfile.xml in Resources */,
+				3BC6802F163A668E00EE696C /* citibank.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC9684F1647ADAF008374A1 /* PlaceOfInterest.m in Sources */,
 				3BD474F3162D3C120033E40D /* CTidy.m in Sources */,
 				3BD474F2162D3C0B0033E40D /* CXMLNode_PrivateExtensions.m in Sources */,
 				3BD474F1162D3C060033E40D /* CXMLNode_XPathExtensions.m in Sources */,
@@ -390,6 +411,8 @@
 				3BCDED1B1627F031001F56EE /* main.m in Sources */,
 				3BCDED1F1627F031001F56EE /* AppDelegate.m in Sources */,
 				3BCDED281627F031001F56EE /* ViewController.m in Sources */,
+				3BC68033163A6E0200EE696C /* DetailViewController.m in Sources */,
+				3BC9684A1647A07A008374A1 /* WebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +434,7 @@
 				3BCDED711627F285001F56EE /* CXMLNode_XPathExtensions.m in Sources */,
 				3BCDED721627F285001F56EE /* CXMLNode.m in Sources */,
 				3BCDED731627F285001F56EE /* CTidy.m in Sources */,
+				3BC9684D1647ACE9008374A1 /* PlaceOfInterest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
