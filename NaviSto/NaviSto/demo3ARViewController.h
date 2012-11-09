@@ -10,4 +10,5 @@
 @class ARView;
 @interface demo3ARViewController : UIViewController
 //@property (retain, nonatomic) ARView *arView;
+@property (retain, nonatomic) NSMutableArray *placesOfInterest;
 @end

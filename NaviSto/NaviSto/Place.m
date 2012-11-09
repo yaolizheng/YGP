@@ -12,6 +12,10 @@
 
 @synthesize name;
 @synthesize location;
+@synthesize address;
+@synthesize phone;
+@synthesize state;
+@synthesize city;
 
 - (id)init
 {
@@ -30,10 +34,14 @@
 	[super dealloc];
 }
 
-+ (Place *)placeAt:(CLLocation *)location withName:(NSString *)name{
++ (Place *)placeAt:(CLLocation *)location withName:(NSString *)name withAddress: (NSString *)address withPhone: (NSString *) phone withState: (NSString *)state withCity: (NSString *)city{
 	Place *p = [[[Place alloc] init] autorelease];
 	p.name = name;
 	p.location = location;
+    p.phone = phone;
+    p.city = city;
+    p.state = state;
+    p.address = address;
 	return p;
 }
 

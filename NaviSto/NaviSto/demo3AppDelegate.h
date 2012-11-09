@@ -14,5 +14,5 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) NSMutableArray *places;
 @property (nonatomic, retain) CLLocation *location;
-
+@property int ID;
 @end

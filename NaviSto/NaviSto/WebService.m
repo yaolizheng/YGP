@@ -16,7 +16,9 @@
 
 
 
-+ (void) getLocation: (CLLocation *) location {
++ (void) getLocation: (CLLocation *) location withType: (NSString *) type{
+    
+    
        NSString *urlString = [NSString stringWithFormat:@"https://mbankingdev.mfoundry.com/gbws/?mjx_server=mbankingdev"];
     
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
@@ -36,7 +38,7 @@
     
     NSMutableData *postBody = [NSMutableData data];
     NSLog(@"RRRRR: %f", location.coordinate.latitude);
-    NSLog(@"RRRRRR: %f", location.coordinate.longitude);     NSString *data = [NSString stringWithFormat:@"<searchLocationsRequest xmlns=\"%@\" locale=\"%@\" bankCode=\"%@\" keyWord=\"%@\" page=\"%@\" pageSize=\"%@\" lat=\"%f\" lon=\"%f\" type=\"%@\" \/>", @"http://www.mfoundry.com/GBML/Schema", @"en",@"usf",@"CitiBank",@"0",@"10",location.coordinate.latitude,location.coordinate.longitude,@"bank"];
+    NSLog(@"RRRRRR: %f", location.coordinate.longitude);     NSString *data = [NSString stringWithFormat:@"<searchLocationsRequest xmlns=\"%@\" locale=\"%@\" bankCode=\"%@\" keyWord=\"%@\" page=\"%@\" pageSize=\"%@\" lat=\"%f\" lon=\"%f\" type=\"%@\" \/>", @"http://www.mfoundry.com/GBML/Schema", @"en",@"usf",@"CitiBank",@"0",@"10",location.coordinate.latitude,location.coordinate.longitude,type];
     
     [postBody appendData:[data dataUsingEncoding:NSUTF8StringEncoding]];
     NSLog(data);
@@ -60,10 +62,8 @@
     if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300) {
         
         NSLog(@"Response: %@", result);
-        //NSString *XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"xmlfile.xml"];
-        //取得数据
-        NSData *XMLData = [result dataUsingEncoding:NSUTF8StringEncoding];//[NSData dataWithContentsOfFile:result];
-        //生成CXMLDocument对象
+
+        NSData *XMLData = [result dataUsingEncoding:NSUTF8StringEncoding]; 
         CXMLDocument *document = [[CXMLDocument alloc] initWithData:XMLData
                                                             options:0
                                                               error:nil
@@ -98,6 +98,10 @@
                 double lon;
                 double lat;
                 NSString *name;
+                NSString *phone;
+                NSString *address;
+                NSString *city;
+                NSString *state;
                 for (i = 0; i < countAttr; i++) {
                     strValue=[[arAttr objectAtIndex:i] stringValue];
                     strName=[[arAttr objectAtIndex:i] name];
@@ -113,15 +117,26 @@
                             if([strName isEqualToString: @"name"] == 1) {
                                 name = strValue;
                             }
-                        }
+                            if([strName isEqualToString: @"phone"] == 1) {
+                                phone = strValue;
+                            }
+                            if([strName isEqualToString: @"address"] == 1) {
+                                address = strValue;
+                            }
+                            if([strName isEqualToString: @"city"] == 1) {
+                                city = strValue;
+                            }
+                            if([strName isEqualToString: @"state"] == 1) {
+                                state = strValue;
+                            }                        }
                         
                     }
                 }
                 
-                Place *p = [Place placeAt:[[CLLocation alloc] initWithLatitude:lat longitude:lon] withName:name];
+                Place *p = [Place placeAt:[[CLLocation alloc] initWithLatitude:lat longitude:lon] withName:name withAddress:address withPhone:phone withState:state withCity:city];
                 [app.places insertObject:p atIndex:j];
                 j++;
-                NSLog(@"%d", j);
+                
             }
         }
         

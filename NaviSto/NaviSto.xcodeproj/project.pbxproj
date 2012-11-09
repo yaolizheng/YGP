@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3BBE0A2C1648F51100130EC3 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE0A2B1648F51100130EC3 /* Place.m */; };
+		3BBF5A1A164BA5A300AF1D71 /* demo3MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB28FC8164999C7002D03A2 /* demo3MapViewController.m */; };
+		3BBF5A22164BA70300AF1D71 /* AtmIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF5A1D164BA70300AF1D71 /* AtmIcon.gif */; };
+		3BBF5A23164BA70300AF1D71 /* BankButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF5A1E164BA70300AF1D71 /* BankButton.gif */; };
+		3BBF5A24164BA70300AF1D71 /* BoaIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF5A1F164BA70300AF1D71 /* BoaIcon.gif */; };
+		3BBF5A25164BA70300AF1D71 /* CitiButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF5A20164BA70300AF1D71 /* CitiButton.png */; };
+		3BBF5A26164BA70300AF1D71 /* CitiIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF5A21164BA70300AF1D71 /* CitiIcon.gif */; };
 		3BDC8C261648E4D700DBAFA8 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC8C231648E4D700DBAFA8 /* CXMLDocument_CreationExtensions.m */; };
 		3BDC8C271648E4D700DBAFA8 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC8C251648E4D700DBAFA8 /* CXMLNode_CreationExtensions.m */; };
 		3BDC8C3F1648E50600DBAFA8 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC8C3E1648E50600DBAFA8 /* CTidy.m */; };
@@ -35,7 +41,6 @@
 		7B1860CE16478CD900B42250 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1860CC16478CD900B42250 /* MainStoryboard.storyboard */; };
 		7B1860D116478CD900B42250 /* demo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1860D016478CD900B42250 /* demo3ViewController.m */; };
 		7B1860D916478D8C00B42250 /* demo3ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1860D816478D8C00B42250 /* demo3ARViewController.m */; };
-		7BB28F3B16489C80002D03A2 /* demo3MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB28F3A16489C80002D03A2 /* demo3MapViewController.m */; };
 		7BB28F5116489F51002D03A2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB28F5016489F51002D03A2 /* AssetsLibrary.framework */; };
 		7BB28F5416489F5A002D03A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB28F5316489F5A002D03A2 /* OpenGLES.framework */; };
 		7BB28F5616489F61002D03A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB28F5516489F61002D03A2 /* QuartzCore.framework */; };
@@ -46,11 +51,18 @@
 		7BB28F6016489F80002D03A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB28F5F16489F80002D03A2 /* MapKit.framework */; };
 		7BB28F9B1648B40A002D03A2 /* ARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB28F9A1648B40A002D03A2 /* ARView.m */; };
 		7BB28FA11648B48E002D03A2 /* PlaceOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB28FA01648B48E002D03A2 /* PlaceOfInterest.m */; };
+		7BB28FC416498E7A002D03A2 /* demo3DetailedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB28FC316498E7A002D03A2 /* demo3DetailedController.m */; };
+		7BB28FC616498FE3002D03A2 /* button(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB28FC516498FE3002D03A2 /* button(2).png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BBE0A2A1648F51100130EC3 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		3BBE0A2B1648F51100130EC3 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		3BBF5A1D164BA70300AF1D71 /* AtmIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AtmIcon.gif; sourceTree = "<group>"; };
+		3BBF5A1E164BA70300AF1D71 /* BankButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BankButton.gif; sourceTree = "<group>"; };
+		3BBF5A1F164BA70300AF1D71 /* BoaIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BoaIcon.gif; sourceTree = "<group>"; };
+		3BBF5A20164BA70300AF1D71 /* CitiButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CitiButton.png; sourceTree = "<group>"; };
+		3BBF5A21164BA70300AF1D71 /* CitiIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CitiIcon.gif; sourceTree = "<group>"; };
 		3BDC8C221648E4D700DBAFA8 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
 		3BDC8C231648E4D700DBAFA8 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
 		3BDC8C241648E4D700DBAFA8 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
@@ -99,8 +111,6 @@
 		7B1860D016478CD900B42250 /* demo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demo3ViewController.m; sourceTree = "<group>"; };
 		7B1860D716478D8C00B42250 /* demo3ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demo3ARViewController.h; sourceTree = "<group>"; };
 		7B1860D816478D8C00B42250 /* demo3ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demo3ARViewController.m; sourceTree = "<group>"; };
-		7BB28F3916489C80002D03A2 /* demo3MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = demo3MapViewController.h; path = ../demo3MapViewController.h; sourceTree = "<group>"; };
-		7BB28F3A16489C80002D03A2 /* demo3MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = demo3MapViewController.m; path = ../demo3MapViewController.m; sourceTree = "<group>"; };
 		7BB28F5016489F51002D03A2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		7BB28F5316489F5A002D03A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		7BB28F5516489F61002D03A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -113,6 +123,11 @@
 		7BB28F9A1648B40A002D03A2 /* ARView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARView.m; sourceTree = "<group>"; };
 		7BB28F9F1648B48E002D03A2 /* PlaceOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceOfInterest.h; sourceTree = "<group>"; };
 		7BB28FA01648B48E002D03A2 /* PlaceOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceOfInterest.m; sourceTree = "<group>"; };
+		7BB28FC216498E7A002D03A2 /* demo3DetailedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demo3DetailedController.h; sourceTree = "<group>"; };
+		7BB28FC316498E7A002D03A2 /* demo3DetailedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demo3DetailedController.m; sourceTree = "<group>"; };
+		7BB28FC516498FE3002D03A2 /* button(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button(2).png"; sourceTree = "<group>"; };
+		7BB28FC7164999C7002D03A2 /* demo3MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = demo3MapViewController.h; sourceTree = "<group>"; };
+		7BB28FC8164999C7002D03A2 /* demo3MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demo3MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +152,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BBF5A1C164BA6EE00AF1D71 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				3BBF5A1D164BA70300AF1D71 /* AtmIcon.gif */,
+				3BBF5A1E164BA70300AF1D71 /* BankButton.gif */,
+				3BBF5A1F164BA70300AF1D71 /* BoaIcon.gif */,
+				3BBF5A20164BA70300AF1D71 /* CitiButton.png */,
+				3BBF5A21164BA70300AF1D71 /* CitiIcon.gif */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
 		3BDC8C201648E4A000DBAFA8 /* TouchXML */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,26 +252,30 @@
 		7B1860BA16478CD900B42250 /* NaviSto */ = {
 			isa = PBXGroup;
 			children = (
+				3BBF5A1C164BA6EE00AF1D71 /* Icon */,
+				3BBE0A2A1648F51100130EC3 /* Place.h */,
+				3BBE0A2B1648F51100130EC3 /* Place.m */,
 				3BDC8C4D1648E73C00DBAFA8 /* xmlfile.xml */,
 				3BDC8C4B1648E72100DBAFA8 /* WebService.h */,
 				3BDC8C4C1648E72100DBAFA8 /* WebService.m */,
-				3BDC8C201648E4A000DBAFA8 /* TouchXML */,
 				7BB28F9F1648B48E002D03A2 /* PlaceOfInterest.h */,
 				7BB28FA01648B48E002D03A2 /* PlaceOfInterest.m */,
 				7BB28F991648B40A002D03A2 /* ARView.h */,
 				7BB28F9A1648B40A002D03A2 /* ARView.m */,
-				7BB28F3916489C80002D03A2 /* demo3MapViewController.h */,
-				7BB28F3A16489C80002D03A2 /* demo3MapViewController.m */,
 				7B1860C316478CD900B42250 /* demo3AppDelegate.h */,
 				7B1860C416478CD900B42250 /* demo3AppDelegate.m */,
 				7B1860CC16478CD900B42250 /* MainStoryboard.storyboard */,
 				7B1860D716478D8C00B42250 /* demo3ARViewController.h */,
 				7B1860D816478D8C00B42250 /* demo3ARViewController.m */,
+				7BB28FC7164999C7002D03A2 /* demo3MapViewController.h */,
+				7BB28FC8164999C7002D03A2 /* demo3MapViewController.m */,
 				7B1860CF16478CD900B42250 /* demo3ViewController.h */,
 				7B1860D016478CD900B42250 /* demo3ViewController.m */,
+				7BB28FC216498E7A002D03A2 /* demo3DetailedController.h */,
+				7BB28FC316498E7A002D03A2 /* demo3DetailedController.m */,
+				7BB28FC516498FE3002D03A2 /* button(2).png */,
+				3BDC8C201648E4A000DBAFA8 /* TouchXML */,
 				7B1860BB16478CD900B42250 /* Supporting Files */,
-				3BBE0A2A1648F51100130EC3 /* Place.h */,
-				3BBE0A2B1648F51100130EC3 /* Place.m */,
 			);
 			path = NaviSto;
 			sourceTree = "<group>";
@@ -321,6 +352,12 @@
 				7B1860CB16478CD900B42250 /* Default-568h@2x.png in Resources */,
 				7B1860CE16478CD900B42250 /* MainStoryboard.storyboard in Resources */,
 				3BDC8C4E1648E73C00DBAFA8 /* xmlfile.xml in Resources */,
+				7BB28FC616498FE3002D03A2 /* button(2).png in Resources */,
+				3BBF5A22164BA70300AF1D71 /* AtmIcon.gif in Resources */,
+				3BBF5A23164BA70300AF1D71 /* BankButton.gif in Resources */,
+				3BBF5A24164BA70300AF1D71 /* BoaIcon.gif in Resources */,
+				3BBF5A25164BA70300AF1D71 /* CitiButton.png in Resources */,
+				3BBF5A26164BA70300AF1D71 /* CitiIcon.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBF5A1A164BA5A300AF1D71 /* demo3MapViewController.m in Sources */,
 				3BDC8C4F1648E84600DBAFA8 /* WebService.m in Sources */,
 				3BDC8C4A1648E59000DBAFA8 /* CXMLElement_CreationExtensions.m in Sources */,
 				3BDC8C491648E58C00DBAFA8 /* CXMLDocument.m in Sources */,
@@ -346,13 +384,13 @@
 				7B1860C516478CD900B42250 /* demo3AppDelegate.m in Sources */,
 				7B1860D116478CD900B42250 /* demo3ViewController.m in Sources */,
 				7B1860D916478D8C00B42250 /* demo3ARViewController.m in Sources */,
-				7BB28F3B16489C80002D03A2 /* demo3MapViewController.m in Sources */,
 				7BB28F9B1648B40A002D03A2 /* ARView.m in Sources */,
 				7BB28FA11648B48E002D03A2 /* PlaceOfInterest.m in Sources */,
 				3BDC8C261648E4D700DBAFA8 /* CXMLDocument_CreationExtensions.m in Sources */,
 				3BDC8C271648E4D700DBAFA8 /* CXMLNode_CreationExtensions.m in Sources */,
 				3BDC8C3F1648E50600DBAFA8 /* CTidy.m in Sources */,
 				3BBE0A2C1648F51100130EC3 /* Place.m in Sources */,
+				7BB28FC416498E7A002D03A2 /* demo3DetailedController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +471,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Zong (ZVF55BH8QB)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -442,9 +480,10 @@
 				GCC_PREFIX_HEADER = "NaviSto/NaviSto-Prefix.pch";
 				HEADER_SEARCH_PATHS = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/include/libxml2/**";
 				INFOPLIST_FILE = "NaviSto/NaviSto-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3BF6E21E-459B-425E-9798-3BEF22D7EE29";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,7 +494,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Zong (ZVF55BH8QB)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -464,9 +503,10 @@
 				GCC_PREFIX_HEADER = "NaviSto/NaviSto-Prefix.pch";
 				HEADER_SEARCH_PATHS = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/include/libxml2/**";
 				INFOPLIST_FILE = "NaviSto/NaviSto-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3BF6E21E-459B-425E-9798-3BEF22D7EE29";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

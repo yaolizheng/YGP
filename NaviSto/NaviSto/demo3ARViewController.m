@@ -13,10 +13,13 @@
 #import "demo3AppDelegate.h"
 #import "Place.h"
 #import <CoreLocation/CoreLocation.h>
+#import "demo3DetailedController.h"
+#import "WebService.h"
 
 @implementation demo3ARViewController
 
 //@synthesize arView;
+@synthesize placesOfInterest;
 
 - (void)didReceiveMemoryWarning
 {
@@ -36,33 +39,16 @@
     seg.selectedSegmentIndex = 0;
     [seg addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = seg;
-    
-	ARView *arView = (ARView *)self.view;
-	
-	// Create array of hard-coded places-of-interest, in this case some famous parks
-    /*const char *poiNames[] = {"Bank of America1",
-        "BoA ATM",
-        "Citibank",
-        "Citibank ATM",
-        "Wells Fargo",
-        "Chase",
-        "Bank Of America2",
-        "Wells Fargo"};
-	
-    CLLocationCoordinate2D poiCoords[] = {{37.780630, -122.466052},
-        {37.781608, -122.458136},
-        {37.786861, -122.447032},
-        {37.776533, -122.461293},
-        {37.785836, -122.461073},
-        {37.797488, -122.464395},
-        {37.780630, -122.466052},
-        {37.782676, -122.483373}};
-    
-    int numPois = sizeof(poiCoords) / sizeof(CLLocationCoordinate2D);*/
+    [self reload];
+}
+
+- (void) reload
+{
+    ARView *arView = (ARView *)self.view;
     demo3AppDelegate *app=[[UIApplication sharedApplication] delegate];
     
     
-	NSMutableArray *placesOfInterest = [NSMutableArray arrayWithCapacity:[app.places count]];
+	placesOfInterest = [NSMutableArray arrayWithCapacity:[app.places count]];
 	for (int i = 0; i < [app.places count]; i++) {
         Place *p = [app.places objectAtIndex:i];
         UIImage *image = [UIImage imageNamed:@"button(2).png"];
@@ -71,17 +57,20 @@
         [button setTitle:p.name forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
+        [button addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchDown];
+        
         button.titleLabel.font = [UIFont fontWithName:@"Courier" size:20];
         [button setBackgroundColor:[UIColor clearColor]];
         CGSize size = [button.titleLabel.text sizeWithFont:button.titleLabel.font];
         button.bounds = CGRectMake(0.0f, 0.0f, size.width + 10, size.height + 2);
+        
         [button setBackgroundImage:image forState:UIControlStateNormal];
-               PlaceOfInterest *poi = [PlaceOfInterest placeOfInterestWithView:button at:[[[CLLocation alloc] initWithLatitude:p.location.coordinate.latitude longitude:p.location.coordinate.longitude] autorelease]];
+        PlaceOfInterest *poi = [PlaceOfInterest placeOfInterestWithView:button at:[[[CLLocation alloc] initWithLatitude:p.location.coordinate.latitude longitude:p.location.coordinate.longitude] autorelease]];
+        button.tag = i;
         [placesOfInterest insertObject:poi atIndex:i];
 	}
 	[arView setPlacesOfInterest:placesOfInterest];
 }
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -118,16 +107,44 @@
 	return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
+-(IBAction)buttonPress:(id)sender{
+    UIButton* btn = (UIButton *) sender;
+    demo3AppDelegate *app=[[UIApplication sharedApplication] delegate];
+    app.ID = btn.tag;
+
+    demo3DetailedController *detail = [[demo3DetailedController alloc]init];
+    //detail.navigationItem.title = @"Location Information";
+    [self.navigationController pushViewController:detail animated:YES];
+}
 - (void)segmentAction:(id)sender{
     switch ([sender selectedSegmentIndex]){
         case 0:{
+            demo3AppDelegate *app=[[UIApplication sharedApplication] delegate];
+            [WebService getLocation:app.location withType:@"all"];
+            [self reload];
         }
             break;
             
         case 1:{
-        }
+            for (UIView *view in self.view.subviews) {
+                if ([view isKindOfClass:[UIButton class]]) {
+                    [view removeFromSuperview];
+                }
+            }
+            demo3AppDelegate *app=[[UIApplication sharedApplication] delegate];
+            [WebService getLocation:app.location withType:@"atm"];
+            [self reload];
+                    }
             break;
         case 2:{
+            for (UIView *view in self.view.subviews) {
+                if ([view isKindOfClass:[UIButton class]]) {
+                    [view removeFromSuperview];
+                }
+            }
+            demo3AppDelegate *app=[[UIApplication sharedApplication] delegate];
+            [WebService getLocation:app.location withType:@"bank"];
+            [self reload];
         }
             break;
         default:

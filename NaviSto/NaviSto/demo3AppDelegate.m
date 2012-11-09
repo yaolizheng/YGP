@@ -12,6 +12,7 @@
 
 @synthesize places=places;
 @synthesize location=location;
+@synthesize ID = ID;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

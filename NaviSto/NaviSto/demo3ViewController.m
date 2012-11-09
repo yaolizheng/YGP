@@ -41,7 +41,15 @@
     app.location = [[[CLLocation alloc] initWithLatitude:latitude longitude:longitude] autorelease];
         NSLog(@"Response: %f", longitude);
         NSLog(@"Response: %f", latitude);
-    [WebService getLocation:[[[CLLocation alloc] initWithLatitude:latitude longitude:longitude] autorelease]];
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]
+                                            initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.center = CGPointMake(160, 240);
+        spinner.hidesWhenStopped = YES;
+        [self.view addSubview:spinner];
+        [spinner startAnimating];
+        NSLog(@"spiner");
+        [WebService getLocation:[[[CLLocation alloc] initWithLatitude:latitude longitude:longitude] autorelease] withType:@"all"];
+        [spinner stopAnimating];
         [locManager stopUpdatingLocation];
         [locManager release];
         locManager = nil;

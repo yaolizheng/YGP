@@ -277,16 +277,17 @@ void ecefToEnu(double lat, double lon, double x, double y, double z, double xr, 
 	} DistanceAndIndex;
 	NSMutableArray *orderedDistances = [NSMutableArray arrayWithCapacity:placesOfInterest.count];
     
+    double alti=-500;
 	// Compute the world coordinates of each place-of-interest
 	for (PlaceOfInterest *poi in [[self placesOfInterest] objectEnumerator]) {
 		double poiX, poiY, poiZ, e, n, u;
 		
 		latLonToEcef(poi.location.coordinate.latitude, poi.location.coordinate.longitude, 0.0, &poiX, &poiY, &poiZ);
 		ecefToEnu(location.coordinate.latitude, location.coordinate.longitude, myX, myY, myZ, poiX, poiY, poiZ, &e, &n, &u);
-		
+		alti+=100;
 		placesOfInterestCoordinates[i][0] = (float)n;
 		placesOfInterestCoordinates[i][1]= -(float)e;
-		placesOfInterestCoordinates[i][2] = 0.0f;
+		placesOfInterestCoordinates[i][2] = -alti;
 		placesOfInterestCoordinates[i][3] = 1.0f;
 		
 		// Add struct containing distance and index to orderedDistances

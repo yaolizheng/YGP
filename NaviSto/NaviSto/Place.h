@@ -13,7 +13,11 @@
 
 @property (nonatomic, retain) CLLocation *location;
 @property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *address;
+@property (nonatomic, retain) NSString *phone;
+@property (nonatomic, retain) NSString *city;
+@property (nonatomic, retain) NSString *state;
 
-+ (Place *)placeAt:(CLLocation *)location withName:(NSString *)name;
++ (Place *)placeAt:(CLLocation *)location withName:(NSString *)name withAddress: (NSString *)address withPhone: (NSString *) phone withState: (NSString *)state withCity: (NSString *)city;
 
 @end

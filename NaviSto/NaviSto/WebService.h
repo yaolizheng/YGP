@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 @interface WebService : NSObject
-+ (void) getLocation: (CLLocation *) location;
++ (void) getLocation: (CLLocation *) location withType: (NSString *) type;
 @end
